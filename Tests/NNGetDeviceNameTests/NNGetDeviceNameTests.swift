@@ -20,6 +20,16 @@ final class NNGetDeviceNameTests: XCTestCase {
         XCTAssertEqual(name, "iPhone 16e")
     }
 
+    func testLatestIPhoneIdentifierReturnsReadableName() {
+        let name = NNGetDeviceName.deviceName(
+            rawIdentifier: "iPhone18,5",
+            simulatorModelIdentifier: nil,
+            isSimulator: false
+        )
+
+        XCTAssertEqual(name, "iPhone 17e")
+    }
+
     func testKnownIPadIdentifierReturnsReadableName() {
         let name = NNGetDeviceName.deviceName(
             rawIdentifier: "iPad16,6",
@@ -27,7 +37,17 @@ final class NNGetDeviceNameTests: XCTestCase {
             isSimulator: false
         )
 
-        XCTAssertEqual(name, "iPad Pro (13 7th Gen)")
+        XCTAssertEqual(name, "iPad Pro 13-inch (M4)")
+    }
+
+    func testLatestIPadIdentifierReturnsReadableName() {
+        let name = NNGetDeviceName.deviceName(
+            rawIdentifier: "iPad17,3",
+            simulatorModelIdentifier: nil,
+            isSimulator: false
+        )
+
+        XCTAssertEqual(name, "iPad Pro 13-inch (M5)")
     }
 
     func testUnknownIdentifierIsReturnedUnchanged() {

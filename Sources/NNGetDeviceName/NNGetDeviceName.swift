@@ -11,7 +11,7 @@ import Foundation
 /// Converts the current iPhone or iPad hardware identifier into a readable device name.
 ///
 /// Unknown identifiers are returned unchanged so that newly released devices remain identifiable.
-/// Simulator names are returned in the form `Simulator(iPhone 16e)`.
+/// Simulator names are returned in the form `Simulator(iPhone 17e)`.
 @objcMembers
 @objc(NNGetDeviceName)
 public final class NNGetDeviceName: NSObject {
@@ -93,6 +93,7 @@ public final class NNGetDeviceName: NSObject {
         "iPhone18,2": "iPhone 17 Pro Max",
         "iPhone18,3": "iPhone 17",
         "iPhone18,4": "iPhone Air",
+        "iPhone18,5": "iPhone 17e",
 
         "iPad1,1": "iPad",
         "iPad2,1": "iPad 2",
@@ -175,18 +176,30 @@ public final class NNGetDeviceName: NSObject {
         "iPad14,4": "iPad Pro (11 4th Gen)",
         "iPad14,5": "iPad Pro (12.9 6th Gen)",
         "iPad14,6": "iPad Pro (12.9 6th Gen)",
-        "iPad14,8": "iPad Air (11 6th Gen)",
-        "iPad14,9": "iPad Air (11 6th Gen)",
-        "iPad14,10": "iPad Air (13 6th Gen)",
-        "iPad14,11": "iPad Air (13 6th Gen)",
+        "iPad14,8": "iPad Air 11-inch (M2)",
+        "iPad14,9": "iPad Air 11-inch (M2)",
+        "iPad14,10": "iPad Air 13-inch (M2)",
+        "iPad14,11": "iPad Air 13-inch (M2)",
+        "iPad15,3": "iPad Air 11-inch (M3)",
+        "iPad15,4": "iPad Air 11-inch (M3)",
+        "iPad15,5": "iPad Air 13-inch (M3)",
+        "iPad15,6": "iPad Air 13-inch (M3)",
         "iPad15,7": "iPad (A16)",
         "iPad15,8": "iPad (A16)",
         "iPad16,1": "iPad mini (A17 Pro)",
         "iPad16,2": "iPad mini (A17 Pro)",
-        "iPad16,3": "iPad Pro (11 5th Gen)",
-        "iPad16,4": "iPad Pro (11 5th Gen)",
-        "iPad16,5": "iPad Pro (13 7th Gen)",
-        "iPad16,6": "iPad Pro (13 7th Gen)",
+        "iPad16,3": "iPad Pro 11-inch (M4)",
+        "iPad16,4": "iPad Pro 11-inch (M4)",
+        "iPad16,5": "iPad Pro 13-inch (M4)",
+        "iPad16,6": "iPad Pro 13-inch (M4)",
+        "iPad16,8": "iPad Air 11-inch (M4)",
+        "iPad16,9": "iPad Air 11-inch (M4)",
+        "iPad16,10": "iPad Air 13-inch (M4)",
+        "iPad16,11": "iPad Air 13-inch (M4)",
+        "iPad17,1": "iPad Pro 11-inch (M5)",
+        "iPad17,2": "iPad Pro 11-inch (M5)",
+        "iPad17,3": "iPad Pro 13-inch (M5)",
+        "iPad17,4": "iPad Pro 13-inch (M5)",
     ]
 
     /// Creates a device-name provider.

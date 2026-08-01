@@ -46,7 +46,7 @@ Known identifiers are converted to product names. Unknown identifiers are return
 On the simulator, the result uses the following format:
 
 ```text
-Simulator(iPhone 16e)
+Simulator(iPhone 17e)
 ```
 
 ## Testing
