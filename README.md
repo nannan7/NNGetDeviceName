@@ -1,6 +1,6 @@
 # NNGetDeviceName
 
-`NNGetDeviceName` is a small Swift package that converts the current iPhone or iPad hardware identifier into a readable device name.
+`NNGetDeviceName` is a small Swift package that converts the current iPhone, iPad, or iPod touch hardware identifier into a readable device name.
 
 The package has no third-party dependencies and does not write logs. Applications can use their own logging policy after obtaining the device name.
 

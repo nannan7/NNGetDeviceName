@@ -30,6 +30,55 @@ final class NNGetDeviceNameTests: XCTestCase {
         XCTAssertEqual(name, "iPhone 17e")
     }
 
+    func testKnownIPodIdentifierReturnsReadableName() {
+        let name = NNGetDeviceName.deviceName(
+            rawIdentifier: "iPod9,1",
+            simulatorModelIdentifier: nil,
+            isSimulator: false
+        )
+
+        XCTAssertEqual(name, "iPod touch (7th generation)")
+    }
+
+    func testKnownIPod5IdentifierReturnsReadableName() {
+        let name = NNGetDeviceName.deviceName(
+            rawIdentifier: "iPod5,1",
+            simulatorModelIdentifier: nil,
+            isSimulator: false
+        )
+
+        XCTAssertEqual(name, "iPod touch")
+    }
+
+    func testKnownIPod6IdentifierReturnsReadableName() {
+        let name = NNGetDeviceName.deviceName(
+            rawIdentifier: "iPod7,1",
+            simulatorModelIdentifier: nil,
+            isSimulator: false
+        )
+
+        XCTAssertEqual(name, "iPod touch (6th generation)")
+    }
+
+    func testKnownHistoricalIPodIdentifiersReturnReadableNames() {
+        let expectedNames = [
+            "iPod1,1": "iPod touch",
+            "iPod2,1": "iPod touch (2nd generation)",
+            "iPod3,1": "iPod touch (3rd generation)",
+            "iPod4,1": "iPod touch (4th generation)",
+        ]
+
+        for (identifier, expectedName) in expectedNames {
+            let name = NNGetDeviceName.deviceName(
+                rawIdentifier: identifier,
+                simulatorModelIdentifier: nil,
+                isSimulator: false
+            )
+
+            XCTAssertEqual(name, expectedName, identifier)
+        }
+    }
+
     func testKnownIPadIdentifierReturnsReadableName() {
         let name = NNGetDeviceName.deviceName(
             rawIdentifier: "iPad16,6",

@@ -8,7 +8,7 @@
 import Darwin
 import Foundation
 
-/// Converts the current iPhone or iPad hardware identifier into a readable device name.
+/// Converts the current iPhone, iPad, or iPod touch hardware identifier into a readable device name.
 ///
 /// Unknown identifiers are returned unchanged so that newly released devices remain identifiable.
 /// Simulator names are returned in the form `Simulator(iPhone 17e)`.
@@ -94,6 +94,14 @@ public final class NNGetDeviceName: NSObject {
         "iPhone18,3": "iPhone 17",
         "iPhone18,4": "iPhone Air",
         "iPhone18,5": "iPhone 17e",
+
+        "iPod1,1": "iPod touch",
+        "iPod2,1": "iPod touch (2nd generation)",
+        "iPod3,1": "iPod touch (3rd generation)",
+        "iPod4,1": "iPod touch (4th generation)",
+        "iPod5,1": "iPod touch",
+        "iPod7,1": "iPod touch (6th generation)",
+        "iPod9,1": "iPod touch (7th generation)",
 
         "iPad1,1": "iPad",
         "iPad2,1": "iPad 2",
@@ -207,7 +215,7 @@ public final class NNGetDeviceName: NSObject {
         super.init()
     }
 
-    /// Returns the readable name of the current iPhone, iPad, or simulator.
+    /// Returns the readable name of the current iPhone, iPad, iPod touch, or simulator.
     ///
     /// If the hardware identifier is not registered yet, the identifier itself is returned.
     public func getDeviceName() -> String {
