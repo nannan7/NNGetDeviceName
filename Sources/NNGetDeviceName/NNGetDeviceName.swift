@@ -11,7 +11,7 @@ import Foundation
 /// Converts the current iPhone, iPad, or iPod touch hardware identifier into a readable device name.
 ///
 /// Unknown identifiers are returned unchanged so that newly released devices remain identifiable.
-/// Simulator names are returned in the form `Simulator(iPhone 17e)`.
+/// Simulator names are returned in the form `Simulator(iPhone Duo)`.
 @objcMembers
 @objc(NNGetDeviceName)
 public final class NNGetDeviceName: NSObject {
@@ -94,6 +94,10 @@ public final class NNGetDeviceName: NSObject {
         "iPhone18,3": "iPhone 17",
         "iPhone18,4": "iPhone Air",
         "iPhone18,5": "iPhone 17e",
+        "iPhone19,2": "iPhone 18 Pro",
+        "iPhone19,3": "iPhone 18 Pro Max",
+        "iPhone19,4": "iPhone Duo",
+        "iPhone19,7": "iPhone 18 Pro Max",
 
         "iPod1,1": "iPod touch",
         "iPod2,1": "iPod touch (2nd generation)",

@@ -30,6 +30,25 @@ final class NNGetDeviceNameTests: XCTestCase {
         XCTAssertEqual(name, "iPhone 17e")
     }
 
+    func testNewIPhoneIdentifiersReturnReadableNames() {
+        let expectedNames = [
+            "iPhone19,2": "iPhone 18 Pro",
+            "iPhone19,3": "iPhone 18 Pro Max",
+            "iPhone19,4": "iPhone Duo",
+            "iPhone19,7": "iPhone 18 Pro Max",
+        ]
+
+        for (identifier, expectedName) in expectedNames {
+            let name = NNGetDeviceName.deviceName(
+                rawIdentifier: identifier,
+                simulatorModelIdentifier: nil,
+                isSimulator: false
+            )
+
+            XCTAssertEqual(name, expectedName, identifier)
+        }
+    }
+
     func testKnownIPodIdentifierReturnsReadableName() {
         let name = NNGetDeviceName.deviceName(
             rawIdentifier: "iPod9,1",
