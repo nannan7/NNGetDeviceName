@@ -103,7 +103,7 @@ public final class NNGetDeviceName: NSObject {
         "iPod2,1": "iPod touch (2nd generation)",
         "iPod3,1": "iPod touch (3rd generation)",
         "iPod4,1": "iPod touch (4th generation)",
-        "iPod5,1": "iPod touch",
+        "iPod5,1": "iPod touch (5th generation)",
         "iPod7,1": "iPod touch (6th generation)",
         "iPod9,1": "iPod touch (7th generation)",
 
@@ -212,6 +212,8 @@ public final class NNGetDeviceName: NSObject {
         "iPad17,2": "iPad Pro 11-inch (M5)",
         "iPad17,3": "iPad Pro 13-inch (M5)",
         "iPad17,4": "iPad Pro 13-inch (M5)",
+        "iPad19,1": "iPad mini (A20 Pro)",
+        "iPad19,2": "iPad mini (A20 Pro)",
     ]
 
     /// Creates a device-name provider.

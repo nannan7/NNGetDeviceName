@@ -66,7 +66,7 @@ final class NNGetDeviceNameTests: XCTestCase {
             isSimulator: false
         )
 
-        XCTAssertEqual(name, "iPod touch")
+        XCTAssertEqual(name, "iPod touch (5th generation)")
     }
 
     func testKnownIPod6IdentifierReturnsReadableName() {
